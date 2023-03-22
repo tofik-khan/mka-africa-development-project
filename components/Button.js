@@ -41,7 +41,7 @@ const SharedStyle = css`
   /* States */
   &:hover {
     background-color: ${(props) =>
-      props.variant === "primary" ? "#2B4BBA" : "#CBCBCB"};
+      props.variant === "primary" ? "#042C3D" : "#CBCBCB"};
     cursor: pointer;
     color: ${(props) => (props.variant === "primary" ? "white" : "#6D6D6D")};
   }
