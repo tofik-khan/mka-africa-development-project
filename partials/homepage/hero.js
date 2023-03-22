@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Button from "../../components/Button";
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -11,7 +12,6 @@ const projects = [
     description:
       "Kibingi is a village located on the N1 highway about 8 hours from the capital and largest city, Kinshasa. The village is home to over 100 families, but its importance is not only to its inhabitants. The village has a clinic which is vital to several smaller villages in the area",
     pageLink: "/",
-    donateLink: "/",
     image: "/images/model-village-project.jpg",
     navName: "Model Village Project",
     goal: "200,000",
@@ -25,7 +25,6 @@ const projects = [
     description:
       "Humanity First aims to build up a new location, with the help of MKA USA, over the span of 3 years. This year HF USA is purchasing the land which MKA USA plans to pay $100,000 towards. The property is located across the street from the current location and the seller has accepted our bid.",
     pageLink: "/",
-    donateLink: "/",
     image: "/images/vocational-college.jpg",
     navName: "Liberia",
     goal: "100,000",
@@ -39,7 +38,6 @@ const projects = [
     description:
       "Established in 1983 Nasir Ahmadiyya Muslim Senior Secondary and Upper Basic School serves more than 1500 students every year from across the Upper River Region from Grade 7 - 12. The school is in need of many infrastructure improvements along with school supplies and other items.",
     pageLink: "/",
-    donateLink: "/",
     image: "/images/gambia-muslim-school.jpg",
     navName: "Gambia",
     goal: "70,000",
@@ -56,7 +54,7 @@ const HeroContainer = styled.div`
 
 const PageTitle = styled.h1`
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 24px;
   color: white;
 `;
@@ -152,6 +150,8 @@ export default function Hero() {
                 </Text>
                 <ProgressBarContainer></ProgressBarContainer>
                 <Text size="16px">0 donations</Text>
+                <Button variant="grey">Learn More</Button>
+                <Button variant="primary">Donate</Button>
               </DonationContainer>
             </Col>
             <Col xs={3} className="d-md-none"></Col>
