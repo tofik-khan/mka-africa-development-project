@@ -52,7 +52,7 @@ export default function Page() {
         <title>Africa Development Initiative</title>
         <meta
           name="description"
-          content="Majlis Khuddam-ul-Ahmadiyya (MKA) holds its National Ijtema for 2022 at Bait-ur-Rehman Mosque, MD for a weekend of fun activites and brotherly connection."
+          content="Africa Development Initiative is a collection of various philanthropic projects carried out by Majlis Khuddam-ul-Ahmadiyya USA."
         />
         <meta name="format-detection" content="telephone=no" />
         <link rel="icon" href="/images/africa.png" />
