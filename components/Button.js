@@ -45,14 +45,6 @@ const SharedStyle = css`
     cursor: pointer;
     color: ${(props) => (props.variant === "primary" ? "white" : "#6D6D6D")};
   }
-  &:focus {
-    background-color: ${(props) =>
-      props.variant === "primary" ? "#607EEB" : "#CBCBCB"};
-    border: 2px solid
-      ${(props) => (props.variant === "primary" ? "#2B4BBA" : "#757575")};
-    box-shadow: 0px 0px 4px 1px
-      ${(props) => (props.variant === "primary" ? "#2B4BBA" : "#595959")};
-  }
 `;
 
 const StyledButton = styled.button`
@@ -66,7 +58,13 @@ const StyledLink = styled(Link)`
 export default function Button({ variant, children, size, href, onClick }) {
   if (href) {
     return (
-      <StyledLink href={href} variant={variant} size={size}>
+      <StyledLink
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        variant={variant}
+        size={size}
+      >
         {children}
       </StyledLink>
     );
