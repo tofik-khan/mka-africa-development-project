@@ -52,13 +52,6 @@ const HeroContainer = styled.div`
   padding-left: 24px;
 `;
 
-const PageTitle = styled.h1`
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  margin-bottom: 24px;
-  color: white;
-`;
-
 const ProjectSideList = styled.li`
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -119,13 +112,6 @@ export default function Hero() {
         <Container className="py-5" fluid>
           <Row>
             <Col xs={3}>
-              <PageTitle>
-                Africa
-                <br />
-                Development
-                <br />
-                Initiative
-              </PageTitle>
               <ul style={{ padding: "0" }}>
                 {projects.map((thisProject) => (
                   <ProjectSideList
