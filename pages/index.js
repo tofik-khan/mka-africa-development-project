@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Hero from "../partials/homepage/hero";
+import LeaderBoard from "../partials/homepage/leaderboard";
 import { Navigation } from "../partials/Nav";
 
 const RamadanChallengeContainer = styled.div`
@@ -73,6 +74,7 @@ export default function Page() {
           <ProgressBar percentage={(316 / 50000) * 100} />
         </ProgressBarContainer>
       </RamadanChallengeContainer>
+      <LeaderBoard />
     </>
   );
 }
