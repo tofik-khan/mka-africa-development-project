@@ -15,8 +15,8 @@ const projects = [
     image: "/images/model-village-project.jpg",
     navName: "Model Village Project",
     goal: "200,000",
-    collection: "0",
-    donations: "0",
+    collection: "316",
+    donations: "6",
   },
   {
     title: "Liberia Vocational Center",
@@ -68,6 +68,7 @@ const ProjectSideList = styled.li`
 `;
 
 const Text = styled.p`
+  font-family: "Poppins", sans-serif;
   margin: 0;
   color: white;
   font-size: ${(props) => props.size || "12px;"};
@@ -86,6 +87,13 @@ const ProgressBarContainer = styled.div`
   background-color: #bdbdbd;
   border-radius: 4px;
   margin: 8px 0px;
+`;
+
+const ProgressBar = styled.div`
+  width: ${(props) => props.percentage}%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #003348;
 `;
 
 const ProjectImage = styled.div`
@@ -148,10 +156,21 @@ export default function Hero() {
                     raised out of ${project.goal} goal
                   </span>
                 </Text>
-                <ProgressBarContainer></ProgressBarContainer>
-                <Text size="16px">0 donations</Text>
-                <Button variant="grey">Learn More</Button>
-                <Button variant="primary">Donate</Button>
+                <ProgressBarContainer>
+                  <ProgressBar
+                    percentage={
+                      parseInt(project.collection) / parseInt(project.goal)
+                    }
+                  />
+                </ProgressBarContainer>
+                <Text size="16px">{project.donations} donations</Text>
+                {/*<Button variant="grey" href="">Learn More</Button>*/}
+                <Button
+                  variant="primary"
+                  href="https://www.classy.org/give/475449/#!/donation/checkout"
+                >
+                  Donate
+                </Button>
               </DonationContainer>
             </Col>
             <Col xs={3} className="d-md-none"></Col>
