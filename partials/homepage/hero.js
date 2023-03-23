@@ -26,7 +26,7 @@ const projects = [
       "Humanity First aims to build up a new location, with the help of MKA USA, over the span of 3 years. This year HF USA is purchasing the land which MKA USA plans to pay $100,000 towards. The property is located across the street from the current location and the seller has accepted our bid.",
     pageLink: "/",
     image: "/images/vocational-college.jpg",
-    navName: "Liberia",
+    navName: "Vocational Center",
     goal: "100,000",
     collection: "0",
     donations: "0",
@@ -39,7 +39,7 @@ const projects = [
       "Established in 1983 Nasir Ahmadiyya Muslim Senior Secondary and Upper Basic School serves more than 1500 students every year from across the Upper River Region from Grade 7 - 12. The school is in need of many infrastructure improvements along with school supplies and other items.",
     pageLink: "/",
     image: "/images/gambia-muslim-school.jpg",
-    navName: "Gambia",
+    navName: "Nasir Academy",
     goal: "70,000",
     collection: "0",
     donations: "0",
@@ -50,13 +50,6 @@ const HeroContainer = styled.div`
   width: 100%;
   background-color: #003348;
   padding-left: 24px;
-`;
-
-const PageTitle = styled.h1`
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  margin-bottom: 24px;
-  color: white;
 `;
 
 const ProjectSideList = styled.li`
@@ -119,13 +112,6 @@ export default function Hero() {
         <Container className="py-5" fluid>
           <Row>
             <Col xs={3}>
-              <PageTitle>
-                Africa
-                <br />
-                Development
-                <br />
-                Initiative
-              </PageTitle>
               <ul style={{ padding: "0" }}>
                 {projects.map((thisProject) => (
                   <ProjectSideList
