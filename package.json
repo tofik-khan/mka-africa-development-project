@@ -11,9 +11,12 @@
   "author": "Tofik Khan",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "classy-node": "^3.2.2",
+    "hamburger-react": "^2.5.0",
     "next": "^13.1.2",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
     "styled-components": "^5.3.7"
   }
 }
