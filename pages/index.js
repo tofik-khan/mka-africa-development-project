@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
 
@@ -47,6 +48,15 @@ const ProgressBar = styled.div`
 export default function Page() {
   return (
     <>
+      <Head>
+        <title>Africa Development Initiative</title>
+        <meta
+          name="description"
+          content="Majlis Khuddam-ul-Ahmadiyya (MKA) holds its National Ijtema for 2022 at Bait-ur-Rehman Mosque, MD for a weekend of fun activites and brotherly connection."
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" href="/images/africa.png" />
+      </Head>
       <Navigation />
       <Hero />
       <RamadanChallengeContainer>
