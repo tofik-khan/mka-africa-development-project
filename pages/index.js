@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
+import Footer from "../partials/Footer";
 
 import Hero from "../partials/homepage/hero";
 import LeaderBoard from "../partials/homepage/leaderboard";
@@ -75,6 +76,7 @@ export default function Page() {
         </ProgressBarContainer>
       </RamadanChallengeContainer>
       <LeaderBoard />
+      <Footer />
     </>
   );
 }
