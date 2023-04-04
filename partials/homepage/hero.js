@@ -52,14 +52,6 @@ const HeroContainer = styled.div`
   padding-left: 24px;
 `;
 
-const ProjectSideList = styled.li`
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  color: ${(props) => (props.selected ? "#E0E0E0" : "#828282")};
-  list-style: none;
-  cursor: pointer;
-`;
-
 const Text = styled.p`
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -111,22 +103,7 @@ export default function Hero() {
       <HeroContainer>
         <Container className="py-5" fluid>
           <Row>
-            <Col xs={3}>
-              <ul style={{ padding: "0" }}>
-                {projects.map((thisProject) => (
-                  <ProjectSideList
-                    key={thisProject.id}
-                    selected={project.id === thisProject.id}
-                    onClick={() => {
-                      updateProject(thisProject);
-                    }}
-                  >
-                    {thisProject.navName}
-                  </ProjectSideList>
-                ))}
-              </ul>
-            </Col>
-            <Col xs={9} md={6}>
+            <Col md={6}>
               <Text size="12px">{`Project ${project.id} of ${projects.length}`}</Text>
               <Text size="32px">{project.title}</Text>
               <Text size="18px" marginBottom="30px">
@@ -159,8 +136,7 @@ export default function Hero() {
                 </Button>
               </DonationContainer>
             </Col>
-            <Col xs={3} className="d-md-none"></Col>
-            <Col xs={9} md={3}>
+            <Col md={6}>
               <ProjectImage url={project.image} />
             </Col>
           </Row>
