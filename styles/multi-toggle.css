@@ -38,6 +38,7 @@
 .toggleContainer .toggleOption.selected {
   color: #003348;
   cursor: initial;
+  font-weight: bold;
 }
 
 .toggleContainer .toggle {

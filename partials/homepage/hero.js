@@ -49,7 +49,7 @@ const projects = [
 
 const multiToggleProps = [
   {
-    displayName: "Model Village Project",
+    displayName: "Model Village",
     value: "1",
   },
   {
