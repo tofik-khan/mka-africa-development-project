@@ -13,6 +13,10 @@ const RamadanChallengeContainer = styled.div`
   box-shadow: 0px 0px 67px 8px rgba(0, 0, 0, 0.25);
   padding: 24px 0px;
   text-align: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 24px;
+  }
 `;
 
 //Move to Components
