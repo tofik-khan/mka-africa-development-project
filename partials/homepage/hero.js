@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
+import MultiToggle from "react-multi-toggle";
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -14,8 +15,8 @@ const projects = [
     pageLink: "/",
     image: "/images/model-village-project.jpg",
     navName: "Model Village Project",
-    goal: "200,000",
-    collection: "316",
+    goal: "150,000",
+    collection: "1552",
     donations: "6",
   },
   {
@@ -40,44 +41,52 @@ const projects = [
     pageLink: "/",
     image: "/images/gambia-muslim-school.jpg",
     navName: "Nasir Academy",
-    goal: "70,000",
+    goal: "50,000",
     collection: "0",
     donations: "0",
   },
 ];
 
+const multiToggleProps = [
+  {
+    displayName: "Model Village Project",
+    value: "1",
+  },
+  {
+    displayName: "Liberia Vocational Center",
+    value: "2",
+  },
+  {
+    displayName: "Nasir Ahmadiyya Muslim School",
+    value: "3",
+  },
+];
+
 const HeroContainer = styled.div`
   width: 100%;
-  background-color: #003348;
+  background-color: #818e71;
   padding-left: 24px;
-`;
-
-const ProjectSideList = styled.li`
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  color: ${(props) => (props.selected ? "#E0E0E0" : "#828282")};
-  list-style: none;
-  cursor: pointer;
 `;
 
 const Text = styled.p`
   font-family: "Poppins", sans-serif;
   margin: 0;
-  color: white;
+  color: ${(props) => props.color || "white"};
   font-size: ${(props) => props.size || "12px;"};
   margin-bottom: ${(props) => props.marginBottom || "0"};
 `;
 
 const DonationContainer = styled.div`
   padding: 20px 30px;
-  background-color: #d56c33;
+  background-color: #818e71;
+  box-shadow: 0px 0px 67px 8px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 `;
 
 const ProgressBarContainer = styled.div`
   width: 100%;
   height: 8px;
-  background-color: #bdbdbd;
+  background-color: #ffffff;
   border-radius: 4px;
   margin: 8px 0px;
 `;
@@ -111,28 +120,31 @@ export default function Hero() {
       <HeroContainer>
         <Container className="py-5" fluid>
           <Row>
-            <Col xs={3}>
-              <ul style={{ padding: "0" }}>
-                {projects.map((thisProject) => (
-                  <ProjectSideList
-                    key={thisProject.id}
-                    selected={project.id === thisProject.id}
-                    onClick={() => {
-                      updateProject(thisProject);
-                    }}
-                  >
-                    {thisProject.navName}
-                  </ProjectSideList>
-                ))}
-              </ul>
+            <Col className="py-3 mb-2">
+              <MultiToggle
+                options={multiToggleProps}
+                selectedOption={project.id}
+                onSelectOption={(value) =>
+                  updateProject(
+                    projects.filter((project) => project.id === value)[0]
+                  )
+                }
+              />
             </Col>
-            <Col xs={9} md={6}>
-              <Text size="12px">{`Project ${project.id} of ${projects.length}`}</Text>
-              <Text size="32px">{project.title}</Text>
-              <Text size="18px" marginBottom="30px">
+          </Row>
+          <Row>
+            <Col md={6}>
+              <Text
+                size="12px"
+                color="#f4ffee"
+              >{`Project ${project.id} of ${projects.length}`}</Text>
+              <Text size="32px" color="#f4ffee">
+                {project.title}
+              </Text>
+              <Text size="18px" color="#f4ffee" marginBottom="30px">
                 {project.tagline}
               </Text>
-              <Text size="20px" marginBottom="30px;">
+              <Text size="20px" color="#f4ffee" marginBottom="30px;">
                 {project.description}
               </Text>
               <DonationContainer>
@@ -151,16 +163,12 @@ export default function Hero() {
                 </ProgressBarContainer>
                 <Text size="16px">{project.donations} donations</Text>
                 {/*<Button variant="grey" href="">Learn More</Button>*/}
-                <Button
-                  variant="primary"
-                  href="https://www.classy.org/give/475449/#!/donation/checkout"
-                >
+                <Button href="https://www.classy.org/give/475449/#!/donation/checkout">
                   Donate
                 </Button>
               </DonationContainer>
             </Col>
-            <Col xs={3} className="d-md-none"></Col>
-            <Col xs={9} md={3}>
+            <Col md={6}>
               <ProjectImage url={project.image} />
             </Col>
           </Row>

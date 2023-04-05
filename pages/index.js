@@ -9,7 +9,8 @@ import { Navigation } from "../partials/Nav";
 
 const RamadanChallengeContainer = styled.div`
   width: 100%;
-  background-color: #d2b278;
+  background-color: #f4ffee;
+  box-shadow: 0px 0px 67px 8px rgba(0, 0, 0, 0.25);
   padding: 24px 0px;
   text-align: center;
 `;
@@ -18,14 +19,18 @@ const RamadanChallengeContainer = styled.div`
 const Text = styled.p`
   font-family: "Poppins", sans-serif;
   margin: 0;
-  color: #3f3f3f;
+  color: #818e71;
   font-size: ${(props) => props.size || "12px;"};
   margin-bottom: ${(props) => props.marginBottom || "0"};
+  max-width: 65ch;
+  margin: auto;
 `;
 
 const H2 = styled.h2`
   font-family: "Poppins", sans-serif;
-  color: #3f3f3f;
+  color: #818e71;
+  text-transform: uppercase;
+  font-weight: bold;
 `;
 
 const ProgressBarContainer = styled.div`
@@ -61,18 +66,20 @@ export default function Page() {
       </Head>
       <Navigation />
       <Hero />
-      <RamadanChallengeContainer>
+      <RamadanChallengeContainer className="py-5">
         <H2>Special Ramadan Challenge</H2>
-        <Text size="24px">
-          Reap blessings of Ramadan by donating for this project during the
-          blessed month
+        <Text size="20px">
+          Reap the blessing of Ramadan by donating for this project during this
+          month. Help us reach our goal of $50,000 by April 21st! Share with
+          your friends, family, classmates and coworkers to support the
+          initiative.
         </Text>
-        <Text size="24px">
-          {`$316 `}
-          <span style={{ fontSize: "18px" }}>raised out of $50,000 goal</span>
+        <Text size="28px" className="pt-4 mt-2">
+          {`$1552 `}
+          <span style={{ fontSize: "20px" }}>raised out of $50,000 goal</span>
         </Text>
         <ProgressBarContainer>
-          <ProgressBar percentage={(316 / 50000) * 100} />
+          <ProgressBar percentage={(1552 / 50000) * 100} />
         </ProgressBarContainer>
       </RamadanChallengeContainer>
       <LeaderBoard />

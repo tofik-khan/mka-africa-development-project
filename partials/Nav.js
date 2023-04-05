@@ -23,7 +23,7 @@ export const Navigation = () => {
     <>
       <StyledNavBar fixed="top" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="https://www.classy.org/campaign/africa-development-initiative/c475449">
             <Image src={logomark} width={250} />
           </Navbar.Brand>
           <Navbar.Toggle>
