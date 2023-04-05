@@ -53,11 +53,11 @@ const multiToggleProps = [
     value: "1",
   },
   {
-    displayName: "Liberia Vocational Center",
+    displayName: "Vocational Center",
     value: "2",
   },
   {
-    displayName: "Nasir Ahmadiyya Muslim School",
+    displayName: "Nasir School",
     value: "3",
   },
 ];
