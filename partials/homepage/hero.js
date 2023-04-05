@@ -11,7 +11,7 @@ const projects = [
     id: "1",
     tagline: "Kibingi, Democratic Republic of the Congo",
     description:
-      "Kibingi is a village located on the N1 highway about 8 hours from the capital and largest city, Kinshasa. The village is home to over 100 families, but its importance is not only to its inhabitants. The village has a clinic which is vital to several smaller villages in the area",
+      "Kibingi is a village located on the N1 highway about 8 hours from the capital and largest city, Kinshasa. The village is home to over 100 families, but its importance is not only to its inhabitants. The model village project will provide essential infrastructure improvements to Kibengi including easy access to clean drinking water, electricity, and a new clinic.",
     pageLink: "/",
     image: "/images/model-village-project.jpg",
     navName: "Model Village Project",
