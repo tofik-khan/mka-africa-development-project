@@ -1,5 +1,6 @@
 
 import "bootstrap/dist/css/bootstrap.css";
+import "../styles/multi-toggle.css";
 import { useEffect } from "react";
 import { SSRProvider } from "react-bootstrap";
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
+import MultiToggle from "react-multi-toggle";
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -14,8 +15,8 @@ const projects = [
     pageLink: "/",
     image: "/images/model-village-project.jpg",
     navName: "Model Village Project",
-    goal: "200,000",
-    collection: "316",
+    goal: "150,000",
+    collection: "1552",
     donations: "6",
   },
   {
@@ -40,36 +41,51 @@ const projects = [
     pageLink: "/",
     image: "/images/gambia-muslim-school.jpg",
     navName: "Nasir Academy",
-    goal: "70,000",
+    goal: "50,000",
     collection: "0",
     donations: "0",
   },
 ];
 
+const multiToggleProps = [
+  {
+    displayName: "Model Village Project",
+    value: "1",
+  },
+  {
+    displayName: "Liberia Vocational Center",
+    value: "2",
+  },
+  {
+    displayName: "Nasir Ahmadiyya Muslim School",
+    value: "3",
+  },
+];
+
 const HeroContainer = styled.div`
   width: 100%;
-  background-color: #003348;
+  background-color: #6f9283;
   padding-left: 24px;
 `;
 
 const Text = styled.p`
   font-family: "Poppins", sans-serif;
   margin: 0;
-  color: white;
+  color: ${(props) => props.color || "white"};
   font-size: ${(props) => props.size || "12px;"};
   margin-bottom: ${(props) => props.marginBottom || "0"};
 `;
 
 const DonationContainer = styled.div`
   padding: 20px 30px;
-  background-color: #d56c33;
+  background-color: #afafaf;
   border-radius: 4px;
 `;
 
 const ProgressBarContainer = styled.div`
   width: 100%;
   height: 8px;
-  background-color: #bdbdbd;
+  background-color: #ffffff;
   border-radius: 4px;
   margin: 8px 0px;
 `;
@@ -103,6 +119,19 @@ export default function Hero() {
       <HeroContainer>
         <Container className="py-5" fluid>
           <Row>
+            <Col className="py-3 mb-2">
+              <MultiToggle
+                options={multiToggleProps}
+                selectedOption={project.id}
+                onSelectOption={(value) =>
+                  updateProject(
+                    projects.filter((project) => project.id === value)[0]
+                  )
+                }
+              />
+            </Col>
+          </Row>
+          <Row>
             <Col md={6}>
               <Text size="12px">{`Project ${project.id} of ${projects.length}`}</Text>
               <Text size="32px">{project.title}</Text>
@@ -113,7 +142,7 @@ export default function Hero() {
                 {project.description}
               </Text>
               <DonationContainer>
-                <Text size="24px">
+                <Text size="24px" color="black">
                   {`$${project.collection} `}
                   <span style={{ fontSize: "18px" }}>
                     raised out of ${project.goal} goal
@@ -126,7 +155,9 @@ export default function Hero() {
                     }
                   />
                 </ProgressBarContainer>
-                <Text size="16px">{project.donations} donations</Text>
+                <Text size="16px" color="black">
+                  {project.donations} donations
+                </Text>
                 {/*<Button variant="grey" href="">Learn More</Button>*/}
                 <Button
                   variant="primary"

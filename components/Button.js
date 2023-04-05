@@ -21,8 +21,7 @@ const SharedStyle = css`
     }
   }}
 
-  background-color: ${(props) =>
-    props.variant === "primary" ? "#003348" : "#E0E0E0"};
+  background-color: ${(props) => props.color || "#003348"};
 
   /* Size */
   height: ${(props) => (props.size === "small" ? "30px" : "50px")};
