@@ -64,7 +64,7 @@ const multiToggleProps = [
 
 const HeroContainer = styled.div`
   width: 100%;
-  background-color: #6f9283;
+  background-color: #818e71;
   padding-left: 24px;
 `;
 
@@ -78,7 +78,8 @@ const Text = styled.p`
 
 const DonationContainer = styled.div`
   padding: 20px 30px;
-  background-color: #afafaf;
+  background-color: #818e71;
+  box-shadow: 0px 0px 67px 8px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 `;
 
@@ -133,16 +134,21 @@ export default function Hero() {
           </Row>
           <Row>
             <Col md={6}>
-              <Text size="12px">{`Project ${project.id} of ${projects.length}`}</Text>
-              <Text size="32px">{project.title}</Text>
-              <Text size="18px" marginBottom="30px">
+              <Text
+                size="12px"
+                color="#f4ffee"
+              >{`Project ${project.id} of ${projects.length}`}</Text>
+              <Text size="32px" color="#f4ffee">
+                {project.title}
+              </Text>
+              <Text size="18px" color="#f4ffee" marginBottom="30px">
                 {project.tagline}
               </Text>
-              <Text size="20px" marginBottom="30px;">
+              <Text size="20px" color="#f4ffee" marginBottom="30px;">
                 {project.description}
               </Text>
               <DonationContainer>
-                <Text size="24px" color="black">
+                <Text size="24px">
                   {`$${project.collection} `}
                   <span style={{ fontSize: "18px" }}>
                     raised out of ${project.goal} goal
@@ -155,14 +161,9 @@ export default function Hero() {
                     }
                   />
                 </ProgressBarContainer>
-                <Text size="16px" color="black">
-                  {project.donations} donations
-                </Text>
+                <Text size="16px">{project.donations} donations</Text>
                 {/*<Button variant="grey" href="">Learn More</Button>*/}
-                <Button
-                  variant="primary"
-                  href="https://www.classy.org/give/475449/#!/donation/checkout"
-                >
+                <Button href="https://www.classy.org/give/475449/#!/donation/checkout">
                   Donate
                 </Button>
               </DonationContainer>

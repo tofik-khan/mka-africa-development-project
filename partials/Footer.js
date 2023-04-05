@@ -2,7 +2,10 @@ import { Container, Row, Col } from "react-bootstrap";
 
 export default function Footer() {
   return (
-    <div className="bg-light w-100 py-5">
+    <div
+      className="w-100 py-5"
+      style={{ backgroundColor: "#042c3d", color: "white" }}
+    >
       <Container>
         <Row className=" justify-content-center justify-content-lg-between align-items-center text-center text-lg-left">
           <Col
@@ -14,7 +17,7 @@ export default function Footer() {
               <img src="/images/mka-logomark.svg" width={200} />
             </a>
             <div className="py-2 text-italic text-muted">
-              &copy; MKA USA 2022. All rights reserved
+              &copy; MKA USA 2023. All rights reserved
             </div>
           </Col>
           <Col sm="12" md="auto" className="order-first order-lg-last">

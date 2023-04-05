@@ -11,7 +11,7 @@
 .toggleContainer {
   width: 100%;
   position: relative;
-  background: #6F9283;
+  background: #818e71;
   border: 1px solid #e0e0e0;
   border-radius: 20px;
 }
@@ -25,12 +25,12 @@
   line-height: 40px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  color: #333333;
+  color: #f4ffee;
   font-size: 16px;
 }
 
 .toggleContainer .toggleOption.selected {
-  color: #ffffff;
+  color: #003348;
   cursor: initial;
 }
 
@@ -40,7 +40,7 @@
   bottom: 0;
   left: 0;
   transition: all 0.4s ease-in-out;
-  background: #003348;
+  background: #f4ffee;
   border-radius: 20px;
 }
 

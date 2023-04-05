@@ -28,21 +28,18 @@ const SharedStyle = css`
   width: 100%;
 
   /* Border */
-  border: ${(props) =>
-    props.variant === "primary" ? "unset" : "solid 1px #AAAAAA"};
+  border: ${(props) => props.borderColor || "solid 1px #AAAAAA"};
   border-radius: 4px;
 
   /* Text */
-  color: ${(props) => (props.variant === "primary" ? "white" : "#6D6D6D")};
+  color: ${(props) => props.textColor || "white"};
   font-weight: bold;
   font-size: 16px;
 
   /* States */
   &:hover {
-    background-color: ${(props) =>
-      props.variant === "primary" ? "#042C3D" : "#CBCBCB"};
+    background-color: ${(props) => props.hoverColor || "#042C3D"};
     cursor: pointer;
-    color: ${(props) => (props.variant === "primary" ? "white" : "#6D6D6D")};
   }
 `;
 
@@ -54,7 +51,17 @@ const StyledLink = styled(Link)`
   ${SharedStyle}
 `;
 
-export default function Button({ variant, children, size, href, onClick }) {
+export default function Button({
+  variant,
+  children,
+  size,
+  href,
+  onClick,
+  color,
+  borderColor,
+  textColor,
+  hoverColor,
+}) {
   if (href) {
     return (
       <StyledLink
@@ -63,13 +70,26 @@ export default function Button({ variant, children, size, href, onClick }) {
         rel="noreferrer"
         variant={variant}
         size={size}
+        color={color}
+        borderColor={borderColor}
+        textColor={textColor}
+        hoverColor={hoverColor}
       >
         {children}
       </StyledLink>
     );
   }
   return (
-    <StyledButton variant={variant} size={size} onClick={onClick} type="button">
+    <StyledButton
+      variant={variant}
+      size={size}
+      onClick={onClick}
+      color={color}
+      borderColor={borderColor}
+      textColor={textColor}
+      hoverColor={hoverColor}
+      type="button"
+    >
       {children}
     </StyledButton>
   );

@@ -37,13 +37,21 @@ const ProgressBar = styled.div`
   background-color: #003348;
 `;
 
+const H3 = styled.h3`
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-size: "20px;"};
+  margin-bottom: ${(props) => props.marginBottom || "0"};
+  max-width: 65ch;
+`;
+
 export default function FundraiserBlock({ name, percentage }) {
   return (
     <>
       <BlockContainer>
         <ImageContainer />
         <InfoContainer>
-          <h3>{name}</h3>
+          <H3>{name}</H3>
           <ProgressBarContainer>
             <ProgressBar percentage={percentage} />
           </ProgressBarContainer>
