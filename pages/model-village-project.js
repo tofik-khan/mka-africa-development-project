@@ -37,7 +37,7 @@ const CTAContainer = styled.div`
 
 const GalleryImage = styled.div`
   width: 100%;
-  height: ${(props) => props.height || "500px"};
+  height: ${(props) => props.height || "400px"};
   background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,8 +127,8 @@ export default function Page() {
           </StyledGalleryCol>
         </Row>
       </Container>
-      <Container className="" fluid>
-        <Row classdName="align-items-center no-gutters">
+      <Container className="py-5">
+        <Row classdName="align-items-center">
           <Col
             className="py-3"
             xs={{ span: 12, order: "last" }}
@@ -160,7 +160,7 @@ export default function Page() {
             </Text>
           </Col>
           <Col
-            //className="py-3"
+            className="py-3"
             xs={{ span: 12, order: "first" }}
             md={{ span: 6, order: "last" }}
           >
@@ -170,10 +170,10 @@ export default function Page() {
             />
           </Col>
         </Row>
-        <Row noGutters={true} className="align-items-center">
+        <Row className="align-items-center">
           <Col
             className="py-3"
-            xs={{ span: 12, order: "first" }}
+            xs={{ span: 12, order: "last" }}
             md={{ span: 6, order: "last" }}
           >
             <Text
@@ -182,32 +182,76 @@ export default function Page() {
               className="pb-4"
               style={{ fontWeight: "bold" }}
             >
-              Power &amp; Electricity
+              Water
             </Text>
             <Text size={"20px"}>
-              One of the aims of our Model Village Project is to provide
-              solar-powered electric lamps to the rural village of Kibingi. This
-              project recognizes that access to electricity is limited making
-              basic tasks such as cooking, studying, and working difficult or
-              impossible after dark.
+              The village of Kibingi, like many rural areas, faces challenges in
+              accessing clean and safe water, which can lead to health problems
+              and hinder economic development. Building a water borehole along
+              with water access points across the village will greatly improve
+              the lives of the village residents.
             </Text>
             <br />
             <Text size={"20px"}>
-              By providing access to light at any hour, the villagers in Kibingi
-              would be able to extend their productive hours into the night,
-              leading to increased economic opportunities and better educational
-              outcomes for children. Additionally, access to solar-powered lamps
-              could improve safety and security by reducing the reliance on open
-              flames, which can be a fire hazard.
+              minute hike up a steep hill which would require villagers to go
+              half an hour carrying pales of water on their back. Women and
+              children, in particular, often bear the burden of water collection
+              in rural areas, which can limit their opportunities for education
+              and economic participation. The construction of a water borehole
+              in Kibingi would not only prevent diseases by providing safe and
+              clean drinking water, but also have economic benefits, as it would
+              reduce the time and effort required to collect water.
             </Text>
           </Col>
           <Col
-            //className="py-3"
-            xs={{ span: 12, order: "last" }}
+            className="py-3"
+            xs={{ span: 12, order: "first" }}
             md={{ span: 6, order: "first" }}
           >
             <GalleryImage
               url="/images/model-village/info02.JPG"
+              style={{ paddingLeft: 0, paddingRight: 0 }}
+            />
+          </Col>
+        </Row>
+        <Row classdName="align-items-center">
+          <Col
+            className="py-3"
+            xs={{ span: 12, order: "last" }}
+            md={{ span: 6, order: "first" }}
+          >
+            <Text
+              size={"32px"}
+              align="center"
+              className="pb-4"
+              style={{ fontWeight: "bold" }}
+            >
+              Classroom / Community Center
+            </Text>
+            <Text size={"20px"}>
+              Establishing a community and training center in the village of
+              Kibingi in DR Congo could provide a space for the community to
+              come together and learn new skills. The center could serve as a
+              hub for educational and social activities, providing opportunities
+              for personal and community development.
+            </Text>
+            <br />
+            <Text size={"20px"}>
+              The community and training center could provide access to
+              resources such as books, computers, and other learning materials,
+              which could enhance the educational opportunities for the
+              villagers of Kibingi. It could also provide training on topics
+              such as agriculture, health, and entrepreneurship, which could
+              improve the economic and social conditions in the village.
+            </Text>
+          </Col>
+          <Col
+            className="py-3"
+            xs={{ span: 12, order: "first" }}
+            md={{ span: 6, order: "last" }}
+          >
+            <GalleryImage
+              url="/images/model-village/info03.jpg"
               style={{ paddingLeft: 0, paddingRight: 0 }}
             />
           </Col>
