@@ -142,23 +142,25 @@ export default function Page() {
               className="pb-4"
               style={{ fontWeight: "bold" }}
             >
-              Power &amp; Electricity
+              New Site
             </Text>
             <Text size={"20px"}>
-              One of the aims of our Model Village Project is to provide
-              solar-powered electric lamps to the rural village of Kibingi. This
-              project recognizes that access to electricity is limited making
-              basic tasks such as cooking, studying, and working difficult or
-              impossible after dark.
+              Humanity First's new vocational center in the capital of Liberia
+              aims to provide skills training and education to underserved
+              communities, with the goal of promoting economic growth and social
+              development. The vocational center will offer a range of courses
+              in areas such as carpentry, plumbing, tailoring, and computer
+              skills, providing individuals with the skills and knowledge needed
+              to secure employment or start their own businesses.
             </Text>
             <br />
             <Text size={"20px"}>
-              By providing access to light at any hour, the villagers in Kibingi
-              would be able to extend their productive hours into the night,
-              leading to increased economic opportunities and better educational
-              outcomes for children. Additionally, access to solar-powered lamps
-              could improve safety and security by reducing the reliance on open
-              flames, which can be a fire hazard.
+              The first phase of the project involves purchasing the land on
+              which the vocational center will be built, which requires
+              fundraising efforts to secure the necessary funds. Once the land
+              is secured, the center will be designed and built to meet the
+              needs of the community, with input from local stakeholders and
+              leaders.
             </Text>
           </Col>
           <Col
@@ -167,7 +169,7 @@ export default function Page() {
             md={{ span: 6, order: "last" }}
           >
             <GalleryImage
-              url="/images/model-village/info01.JPG"
+              url="/images/vocational-center/info01.JPG"
               style={{ paddingLeft: 0, paddingRight: 0 }}
             />
           </Col>
@@ -184,25 +186,32 @@ export default function Page() {
               className="pb-4"
               style={{ fontWeight: "bold" }}
             >
-              Water
+              Capacity &amp; Facilities
             </Text>
             <Text size={"20px"}>
-              The village of Kibingi, like many rural areas, faces challenges in
-              accessing clean and safe water, which can lead to health problems
-              and hinder economic development. Building a water borehole along
-              with water access points across the village will greatly improve
-              the lives of the village residents.
+              The vocational center will provide a safe and welcoming space for
+              individuals to learn and grow, with state-of-the-art facilities
+              and equipment to ensure that students receive high-quality
+              training. The center will also offer support services such as
+              career counseling, job placement assistance, and mentorship
+              programs to help students achieve their goals.
             </Text>
             <br />
             <Text size={"20px"}>
-              minute hike up a steep hill which would require villagers to go
-              half an hour carrying pales of water on their back. Women and
-              children, in particular, often bear the burden of water collection
-              in rural areas, which can limit their opportunities for education
-              and economic participation. The construction of a water borehole
-              in Kibingi would not only prevent diseases by providing safe and
-              clean drinking water, but also have economic benefits, as it would
-              reduce the time and effort required to collect water.
+              In addition to providing valuable skills training and education,
+              the vocational center will help to promote economic growth and
+              social development in the surrounding community. It will create
+              job opportunities and stimulate local entrepreneurship, leading to
+              increased economic activity and improved living standards.
+            </Text>
+            <br />
+            <Text size={"20px"}>
+              Overall, the new vocational center by Humanity First in the
+              capital of Liberia has the potential to be a transformative force
+              in the lives of individuals and the community as a whole. With its
+              focus on skills training and education, the center has the
+              potential to help individuals achieve their full potential and
+              contribute to the development of their communities.
             </Text>
           </Col>
           <Col
@@ -211,49 +220,7 @@ export default function Page() {
             md={{ span: 6, order: "first" }}
           >
             <GalleryImage
-              url="/images/model-village/info02.JPG"
-              style={{ paddingLeft: 0, paddingRight: 0 }}
-            />
-          </Col>
-        </Row>
-        <Row classdName="align-items-center">
-          <Col
-            className="py-3"
-            xs={{ span: 12, order: "last" }}
-            md={{ span: 6, order: "first" }}
-          >
-            <Text
-              size={"32px"}
-              align="center"
-              className="pb-4"
-              style={{ fontWeight: "bold" }}
-            >
-              Classroom / Community Center
-            </Text>
-            <Text size={"20px"}>
-              Establishing a community and training center in the village of
-              Kibingi in DR Congo could provide a space for the community to
-              come together and learn new skills. The center could serve as a
-              hub for educational and social activities, providing opportunities
-              for personal and community development.
-            </Text>
-            <br />
-            <Text size={"20px"}>
-              The community and training center could provide access to
-              resources such as books, computers, and other learning materials,
-              which could enhance the educational opportunities for the
-              villagers of Kibingi. It could also provide training on topics
-              such as agriculture, health, and entrepreneurship, which could
-              improve the economic and social conditions in the village.
-            </Text>
-          </Col>
-          <Col
-            className="py-3"
-            xs={{ span: 12, order: "first" }}
-            md={{ span: 6, order: "last" }}
-          >
-            <GalleryImage
-              url="/images/model-village/info03.jpg"
+              url="/images/vocational-center/info02.JPG"
               style={{ paddingLeft: 0, paddingRight: 0 }}
             />
           </Col>
