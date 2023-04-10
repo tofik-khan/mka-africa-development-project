@@ -113,19 +113,19 @@ export default function Page() {
       <Container fluid>
         <Row>
           <Col xs={12}>
-            <GalleryImage url="/images/model-village/gallery01.jpg" />
+            <GalleryImage url="/images/vocational-center/gallery01.jpg" />
           </Col>
           <StyledGalleryCol md={3}>
-            <GalleryImage url="/images/model-village/gallery02.jpg" />
+            <GalleryImage url="/images/vocational-center/gallery02.jpg" />
           </StyledGalleryCol>
           <StyledGalleryCol md={3}>
-            <GalleryImage url="/images/model-village/gallery03.jpg" />
+            <GalleryImage url="/images/vocational-center/gallery03.jpg" />
           </StyledGalleryCol>
           <StyledGalleryCol md={3}>
-            <GalleryImage url="/images/model-village/gallery04.jpg" />
+            <GalleryImage url="/images/vocational-center/gallery04.jpg" />
           </StyledGalleryCol>
           <StyledGalleryCol md={3}>
-            <GalleryImage url="/images/model-village/gallery05.jpg" />
+            <GalleryImage url="/images/vocational-center/gallery05.jpg" />
           </StyledGalleryCol>
         </Row>
       </Container>
