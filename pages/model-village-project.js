@@ -63,7 +63,7 @@ export default function Page() {
       <Navigation />
       <HeroContainer>
         <H1 className="pt-5 pb-2" align="center" color="white">
-          Model Village Project Page
+          Model Village Project
         </H1>
         <Text className="pb-3" color="white" size="20px" align="center">
           <Image src="/images/map-marker.svg" width={20} height={20} />
