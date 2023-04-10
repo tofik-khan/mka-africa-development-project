@@ -24,9 +24,10 @@ const LogoContainer = styled.div`
 
 const SponsorLogo = styled.div`
   width: 150px;
-  height: 45px;
+  height: ${(props) => (props.square ? "100px" : "45px")};
   background-image: url(${(props) => props.url});
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 `;
 
 const CTAContainer = styled.div`
@@ -52,7 +53,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>ADI | Model Village Project</title>
+        <title>ADI | Liberia Vocational Center</title>
         <meta
           name="description"
           content="Model Village Project, 1 of 3 philanthropic projects carried out by Majlis Khuddam-ul-Ahmadiyya USA for the year 2023."
@@ -63,20 +64,21 @@ export default function Page() {
       <Navigation />
       <HeroContainer>
         <H1 className="pt-5 pb-2" align="center" color="white">
-          Model Village Project
+          Vocational Center
         </H1>
         <Text className="pb-3" color="white" size="20px" align="center">
           <Image src="/images/map-marker.svg" width={20} height={20} />
-          Kibingi, Democratic Republic of the Congo
+          Monrovia, Liberia
         </Text>
         <Text color="white" size="16px" align="center">
-          The project aims to provide basic infrastructure needs to the village.
-          These include a new water (borehole), updated classrooms, renovations
-          to the clinic, public and private lighting with solar panels among
-          other things.
+          Humanity First aims to build up a new location, with the help of MKA
+          USA, over the span of 3 years. This year HF USA is purchasing the land
+          which MKA USA plans to pay $100,000 towards. The property is located
+          across the street from the current location and the seller has
+          accepted our bid.
         </Text>
         <LogoContainer className="py-5">
-          <SponsorLogo url="/images/iaaae.png" />
+          <SponsorLogo square url="/images/humanity-first.png" />
           <SponsorLogo url="/images/mka-logomark.svg" />
         </LogoContainer>
         <Container className="pb-3">
@@ -90,11 +92,11 @@ export default function Page() {
               >
                 $1,939{" "}
                 <span style={{ fontSize: "20px", fontWeight: "normal" }}>
-                  raised out of $300,000
+                  raised out of $100,000
                 </span>
               </Text>
               <ProgressBar>
-                <ProgressBar.Bar percentage={(1939 / 300000) * 100} />
+                <ProgressBar.Bar percentage={(1939 / 100000) * 100} />
               </ProgressBar>
               <Text align="center" color="white">
                 31 Donations
