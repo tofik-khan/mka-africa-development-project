@@ -39,6 +39,7 @@ const SharedStyle = css`
   /* States */
   &:hover {
     background-color: ${(props) => props.hoverColor || "#042C3D"};
+    color: white;
     cursor: pointer;
   }
 `;
