@@ -169,7 +169,7 @@ export default function Page() {
             md={{ span: 6, order: "last" }}
           >
             <GalleryImage
-              url="/images/vocational-center/info01.JPG"
+              url="/images/vocational-center/info01.jpg"
               style={{ paddingLeft: 0, paddingRight: 0 }}
             />
           </Col>
@@ -220,7 +220,7 @@ export default function Page() {
             md={{ span: 6, order: "first" }}
           >
             <GalleryImage
-              url="/images/vocational-center/info02.JPG"
+              url="/images/vocational-center/info02.jpg"
               style={{ paddingLeft: 0, paddingRight: 0 }}
             />
           </Col>
