@@ -157,7 +157,8 @@ export default function Hero() {
                 <ProgressBarContainer>
                   <ProgressBar
                     percentage={
-                      parseInt(project.collection) / parseInt(project.goal)
+                      (parseInt(project.collection) / parseInt(project.goal)) *
+                      100
                     }
                   />
                 </ProgressBarContainer>
