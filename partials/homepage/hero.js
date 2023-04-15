@@ -16,7 +16,7 @@ const projects = [
     image: "/images/model-village-project.jpg",
     navName: "Model Village Project",
     goal: "150,000",
-    collection: "1552",
+    collection: "10647",
     donations: "6",
   },
   {
@@ -162,9 +162,16 @@ export default function Hero() {
                   />
                 </ProgressBarContainer>
                 <Text size="16px">{project.donations} donations</Text>
-                {/*<Button variant="grey" href="">Learn More</Button>*/}
                 <Button href="https://www.classy.org/give/475449/#!/donation/checkout">
                   Donate
+                </Button>
+                <Button
+                  color="transparent"
+                  borderColor={"solid 1px #003348"}
+                  textColor={"#003348"}
+                  href="https://www.classy.org/campaign/africa-development-initiative/c475449"
+                >
+                  Fundraising Page
                 </Button>
               </DonationContainer>
             </Col>
