@@ -83,7 +83,7 @@ export default function Page() {
           <span style={{ fontSize: "20px" }}>raised out of $50,000 goal</span>
         </Text>
         <ProgressBarContainer>
-          <ProgressBar percentage={(10647 / 50000) * 100} />
+          <ProgressBar percentage={(21085 / 50000) * 100} />
         </ProgressBarContainer>
       </RamadanChallengeContainer>
       <LeaderBoard />
