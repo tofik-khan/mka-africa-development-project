@@ -16,7 +16,7 @@ const projects = [
     image: "/images/model-village-project.jpg",
     navName: "Model Village Project",
     goal: "150000",
-    collection: "10647",
+    collection: "21085",
     donations: "6",
   },
   {

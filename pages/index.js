@@ -79,7 +79,7 @@ export default function Page() {
           initiative.
         </Text>
         <Text size="28px" className="pt-4 mt-2">
-          {`$10647 `}
+          {`$21085 `}
           <span style={{ fontSize: "20px" }}>raised out of $50,000 goal</span>
         </Text>
         <ProgressBarContainer>
